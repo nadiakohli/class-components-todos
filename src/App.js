@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { nanoid } from 'nanoid';
 
 // Components
-import ToDo from './components/ToDo';
-import ToDoForm from './components/ToDoForm';
+import ToDo from 'components/ToDo';
+import ToDoForm from 'components/ToDoForm';
 
 // Styles
 const Wrapper = styled.div`

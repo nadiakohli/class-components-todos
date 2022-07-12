@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
-import { Input, Button, Form } from './styled';
+import { Input, Button, Form } from 'components/ToDoForm/styled';
 
 class ToDoForm extends Component {
   constructor(props) {
@@ -46,6 +47,10 @@ class ToDoForm extends Component {
       </Form>
     );
   };
+};
+
+ToDoForm.propTypes = {
+  handleAddTask: PropTypes.func.isRequired,
 };
 
 export default ToDoForm;

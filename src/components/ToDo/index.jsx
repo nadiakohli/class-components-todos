@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // Styles
-import { ItemTodo, ItemText, DeleteItem } from './styled';
+import { ItemTodo, ItemText, DeleteItem } from 'components/ToDo/styled';
 
 // Icons
-import { ReactComponent as IconClose } from '../../icons/timesSolid.svg';
+import { ReactComponent as IconClose } from 'assets/icons/timesSolid.svg';
 
 class ToDo extends Component {
   render () {
@@ -18,6 +19,16 @@ class ToDo extends Component {
       </ItemTodo>
     );
   };
+};
+
+ToDo.propTypes = {
+  todo: PropTypes.shape({
+    id: PropTypes.string,
+    complete: PropTypes.bool,
+    task: PropTypes.string,
+  }).isRequired,
+  handleUpdateTask: PropTypes.func.isRequired,
+  handleRemoveTask: PropTypes.func.isRequired,
 };
 
 export default ToDo;
